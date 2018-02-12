@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Property } from './model';
+import { Property } from './property';
 
 @Component({
   selector: 'app-property',
@@ -7,14 +7,14 @@ import { Property } from './model';
   styleUrls: ['./property.component.css']
 })
 export class PropertyComponent implements OnInit {
-  public model: Property;
+  
   constructor(){
-    this.model = new Property();
-    this.model.StreetName = "Mcgee";
+   
   }
 
   title ="property Price";
   price = 0;
+  prop1 = new Property(3080,"Mcgee");
 
   addItem() { 
     this.price++;
